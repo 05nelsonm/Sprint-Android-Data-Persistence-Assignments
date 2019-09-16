@@ -66,7 +66,15 @@ class Prefs(context: Context) {
     // TODO: 19. This collects all known entries in Shared Preferences, with the help of the ID List
     // read all entries
     fun readAllEntries(): MutableList<JournalEntry> {
-        return mutableListOf()
+        val listOfIds = getListOfIds()
+
+        val entryList = mutableListOf<JournalEntry>()
+        for (id in listOfIds) {
+            readEntry(id.toInt())?.let {
+                entryList.add(it)
+            }
+        }
+        return entryList
     }
     // TODO: 20. This is another way to define a SharedPreferences item
     // In Activity, can simply use: prefs.bgColor (to get and set)
