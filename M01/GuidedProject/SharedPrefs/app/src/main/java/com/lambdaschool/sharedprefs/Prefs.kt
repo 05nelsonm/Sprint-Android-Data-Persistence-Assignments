@@ -25,6 +25,10 @@ class Prefs(context: Context) {
             val editor = sharedPrefs.edit()
 
             var nextId = sharedPrefs.getInt(NEXT_ID_KEY, 0)
+            entry.id = nextId
+
+            editor.putInt(NEXT_ID_KEY, nextId++)
+
             ids.add(entry.id.toString())
             val newIdList = StringBuilder()
             for (id in ids) {
@@ -51,7 +55,13 @@ class Prefs(context: Context) {
         }
     }
 
-    // read an existing entry
+    // TODO: 18a. read an existing entry
+    fun readEntry(id: Int): JournalEntry? {
+        val entryAsCsv = sharedPrefs.getString(ENTRY_ID_KEY_PREFIX + id, "invalid")
+        return entryAsCsv?.let {
+            JournalEntry(entryAsCsv)
+        }
+    }
 
     // TODO: 19. This collects all known entries in Shared Preferences, with the help of the ID List
     // read all entries
