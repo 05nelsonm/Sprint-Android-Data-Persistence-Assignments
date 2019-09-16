@@ -15,7 +15,9 @@ class Prefs(context: Context) {
         private const val ENTRY_ID_KEY_PREFIX = "entry_id"
     }
 
-    val sharedPrefs: SharedPreferences = context.getSharedPreferences(JOURNAL_PREFERENCES, Context.MODE_PRIVATE)
+    val sharedPrefs: SharedPreferences =
+        context.getSharedPreferences(JOURNAL_PREFERENCES, Context.MODE_PRIVATE)
+
     // TODO: 17. Each Journal Entry will be its own entry in shared preferences
     // create a new entry
     fun createEntry(entry: JournalEntry) {
@@ -53,6 +55,8 @@ class Prefs(context: Context) {
         if (idList.isNotBlank()) {
             ids.addAll(oldList)
         }
+
+        return ids
     }
 
     // TODO: 18a. read an existing entry
@@ -82,6 +86,8 @@ class Prefs(context: Context) {
     // TODO: 21. Update an entry - use CSV technique to "serialize" a Journal Entry
     // edit an existing entry
     fun updateEntry(entry: JournalEntry) {
-
+        val editor = sharedPrefs.edit()
+        editor.putString(ENTRY_ID_KEY_PREFIX + entry.id, entry.toCsvString())
+        editor.apply()
     }
 }
