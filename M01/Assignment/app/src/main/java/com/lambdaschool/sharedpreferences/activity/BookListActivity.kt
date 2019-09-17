@@ -1,18 +1,19 @@
-package com.lambdaschool.sharedpreferences
+package com.lambdaschool.sharedpreferences.activity
 
 import android.os.Bundle
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import com.lambdaschool.sharedpreferences.R
 
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_journal_list.*
 
-class MainActivity : AppCompatActivity() {
+class JournalListActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_journal_list)
         setSupportActionBar(toolbar)
 
         fab.setOnClickListener { view ->
