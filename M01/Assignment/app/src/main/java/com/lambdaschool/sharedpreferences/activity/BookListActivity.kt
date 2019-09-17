@@ -7,13 +7,13 @@ import android.view.Menu
 import android.view.MenuItem
 import com.lambdaschool.sharedpreferences.R
 
-import kotlinx.android.synthetic.main.activity_journal_list.*
+import kotlinx.android.synthetic.main.activity_book_list.*
 
-class JournalListActivity : AppCompatActivity() {
+class BookListActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_journal_list)
+        setContentView(R.layout.activity_book_list)
         setSupportActionBar(toolbar)
 
         fab.setOnClickListener { view ->

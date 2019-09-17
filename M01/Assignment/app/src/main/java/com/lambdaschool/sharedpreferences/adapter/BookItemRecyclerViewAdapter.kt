@@ -10,10 +10,10 @@ import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.lambdaschool.sharedpreferences.R
 
-class JournalItemRecyclerViewAdapter(
+class BookItemRecyclerViewAdapter(
     private val data: BucketItem,
     private val listener: JournalFragment.OnJournalFragmentInteractionListener
-) : RecyclerView.Adapter<JournalItemRecyclerViewAdapter.ViewHolder>() {
+) : RecyclerView.Adapter<BookItemRecyclerViewAdapter.ViewHolder>() {
 
     private val journalTitle = data.journalEntryTitle
     lateinit var context: Context
