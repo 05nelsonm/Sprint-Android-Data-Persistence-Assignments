@@ -21,24 +21,7 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <!--<include layout="@layout/content_main" />-->
-
-    <LinearLayout
-        android:layout_marginTop="?attr/actionBarSize"
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/book_item_list"
-        android:name="com.lambdaschool.sharedpreferences.activity.BookListActivity"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="16dp"
-        tools:context=".activity.BookListActivity"
-        tools:listitem="@layout/item_journal" />
-
-    </LinearLayout>
+    <include layout="@layout/content_main" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
