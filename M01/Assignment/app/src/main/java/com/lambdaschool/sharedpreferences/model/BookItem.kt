@@ -5,5 +5,6 @@ import java.io.Serializable
 class BookItem(
     var name: String,
     var reason: String,
-    var completed: Boolean
+    var completed: Boolean,
+    var id: Int
 ) : Serializable

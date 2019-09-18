@@ -20,6 +20,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="@color/secondaryTextColor"
             android:hint="Title"
+            android:singleLine="true"
             android:textColor="@color/secondaryTextColor"
             android:textColorHint="@color/hintTextColor" />
 
@@ -29,6 +30,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="@color/secondaryTextColor"
             android:hint="Reason"
+            android:isScrollContainer="true"
             android:paddingTop="32dp"
             android:paddingBottom="32dp"
             android:textColor="@color/secondaryTextColor"

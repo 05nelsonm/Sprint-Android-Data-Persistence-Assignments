@@ -10,8 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".activity.BookDetailActivity"
-            android:windowSoftInputMode="adjustPan" />
+            android:name=".activity.BookDetailActivity" />
         <activity
             android:name=".activity.BookListActivity"
             android:label="@string/app_name"

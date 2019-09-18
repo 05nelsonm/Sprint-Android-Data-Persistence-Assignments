@@ -1,16 +1,20 @@
 package com.lambdaschool.sharedpreferences.adapter
 
+import android.app.Activity
 import android.app.AlertDialog
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.lambdaschool.sharedpreferences.R
+import com.lambdaschool.sharedpreferences.activity.BookDetailActivity
+import com.lambdaschool.sharedpreferences.activity.BookListActivity
 import com.lambdaschool.sharedpreferences.model.BookItem
+import com.lambdaschool.sharedpreferences.util.bookIdRefactor
 import kotlinx.android.synthetic.main.book_item_layout.view.*
 
 class BookItemRecyclerViewAdapter(private val data: MutableList<BookItem>) :
@@ -46,8 +50,9 @@ class BookItemRecyclerViewAdapter(private val data: MutableList<BookItem>) :
 
         // On Click Listener for the entry
         holder.bookItemContainer.setOnClickListener {
-            // intent edit item activity for result
-            //notifyItemChanged(position)
+            val intent = Intent(context, BookDetailActivity::class.java)
+            intent.putExtra(BookListActivity.DETAIL_ITEM_KEY, data[position])
+            (context as Activity).startActivityForResult(intent, BookListActivity.EDIT_ITEM_CODE)
         }
 
         // Delete an item
@@ -60,6 +65,7 @@ class BookItemRecyclerViewAdapter(private val data: MutableList<BookItem>) :
             builder.setPositiveButton("YES"){ dialog, which ->
                 data.removeAt(position)
                 notifyItemRemoved(position)
+                bookIdRefactor(data)
             }
 
             builder.setNegativeButton("No"){_, _ -> }
