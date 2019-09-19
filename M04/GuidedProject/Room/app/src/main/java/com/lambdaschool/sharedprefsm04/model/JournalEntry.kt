@@ -1,4 +1,4 @@
-package com.lambdaschool.sharedprefs.model
+package com.lambdaschool.sharedprefsm04.model
 
 import android.net.Uri
 import androidx.annotation.NonNull

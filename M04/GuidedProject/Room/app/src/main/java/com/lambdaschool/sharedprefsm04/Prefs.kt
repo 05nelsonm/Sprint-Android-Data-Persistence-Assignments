@@ -1,11 +1,11 @@
-package com.lambdaschool.sharedprefs
+package com.lambdaschool.sharedprefsm04
 
 import android.content.Context
 import android.content.SharedPreferences
 import android.graphics.Color
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.lambdaschool.sharedprefs.model.JournalEntry
+import com.lambdaschool.sharedprefsm04.model.JournalEntry
 
 class Prefs(context: Context): JournalRepoInterface {
     companion object {

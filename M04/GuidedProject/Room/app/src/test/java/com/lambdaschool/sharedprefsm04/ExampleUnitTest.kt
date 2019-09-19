@@ -1,4 +1,4 @@
-package com.lambdaschool.sharedprefs
+package com.lambdaschool.sharedprefsm04
 
 import org.junit.Test
 

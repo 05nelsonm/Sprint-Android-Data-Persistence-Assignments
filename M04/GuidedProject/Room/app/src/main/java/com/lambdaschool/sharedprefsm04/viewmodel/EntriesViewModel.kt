@@ -1,9 +1,9 @@
-package com.lambdaschool.sharedprefs.viewmodel
+package com.lambdaschool.sharedprefsm04.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
-import com.lambdaschool.sharedprefs.model.JournalEntry
-import com.lambdaschool.sharedprefs.repo
+import com.lambdaschool.sharedprefsm04.model.JournalEntry
+import com.lambdaschool.sharedprefsm04.repo
 
 // TODO 24: Create a ViewModel for entries
 class EntriesViewModel : ViewModel() {

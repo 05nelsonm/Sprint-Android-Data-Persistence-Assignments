@@ -1,10 +1,10 @@
-package com.lambdaschool.sharedprefs.database
+package com.lambdaschool.sharedprefsm04.database
 
 import android.content.Context
 import androidx.lifecycle.LiveData
 import androidx.room.Room
-import com.lambdaschool.sharedprefs.JournalRepoInterface
-import com.lambdaschool.sharedprefs.model.JournalEntry
+import com.lambdaschool.sharedprefsm04.JournalRepoInterface
+import com.lambdaschool.sharedprefsm04.model.JournalEntry
 
 // TODO 5: Create the Database repo and implement the methods
 class JournalDBRepo(val context: Context) : JournalRepoInterface {

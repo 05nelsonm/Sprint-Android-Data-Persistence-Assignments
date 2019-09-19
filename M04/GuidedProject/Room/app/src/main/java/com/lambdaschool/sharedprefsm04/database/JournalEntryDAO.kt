@@ -1,8 +1,8 @@
-package com.lambdaschool.sharedprefs.database
+package com.lambdaschool.sharedprefsm04.database
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
-import com.lambdaschool.sharedprefs.model.JournalEntry
+import com.lambdaschool.sharedprefsm04.model.JournalEntry
 
 // TODO 9: Let's define the DAO with methods from our repo interface
 @Dao

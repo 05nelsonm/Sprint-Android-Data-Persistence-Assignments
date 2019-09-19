@@ -1,2 +1,2 @@
 include ':app'
-rootProject.name='SharedPrefs'
+rootProject.name='SharedPrefsm04'
