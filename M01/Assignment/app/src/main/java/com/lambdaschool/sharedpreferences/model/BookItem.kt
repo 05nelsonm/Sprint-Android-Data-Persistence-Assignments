@@ -11,7 +11,7 @@ class BookItem /*(
 )*/: Serializable {
 
     companion object {
-        const val TAG = "BookItem"
+        const val INVALID_ID = -1
     }
 
     var name: String? = null
@@ -25,7 +25,7 @@ class BookItem /*(
         this.completed = completed
         this.id = id
     }
-    
+
     constructor(csv: String) {
         val item = csv.split(",")
         this.name = item[0]
@@ -34,7 +34,7 @@ class BookItem /*(
         this.id = item[3].toInt()
     }
 
-    fun createCsvString(): String {
+    fun toCsvString(): String {
         return "$name,$reason,$completed,$id"
     }
 }
