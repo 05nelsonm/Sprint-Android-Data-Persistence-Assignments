@@ -10,36 +10,51 @@ import kotlinx.android.synthetic.main.activity_book_detail.*
 
 class BookDetailActivity : AppCompatActivity() {
 
+    companion object {
+        const val DETAIL_ITEM_KEY = "08HSPOIDFH09I12HPFI"
+    }
+
     private var bookItem: BookItem? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_book_detail)
 
-        val bundle: Bundle? = intent.extras
-        if (bundle != null) {
-            bookItem = bundle.getSerializable(BookListActivity.DETAIL_ITEM_KEY) as BookItem
-            loadBookItemDetails(bookItem)
+        if (intent.getStringExtra(BookListActivity.EDIT_ITEM_KEY) != null) {
+            bookItem = BookItem(intent.getStringExtra(BookListActivity.EDIT_ITEM_KEY)!!)
+        } else {
+            bookItem = BookItem("", "", false, intent.getIntExtra(BookListActivity.NEW_ITEM_KEY,-1))
         }
+
+        loadBookItemDetails(bookItem)
     }
 
     override fun onBackPressed() {
+
         if (et_name.text.toString() == "" && et_reason.text.toString() == "") {
+
             super.onBackPressed()
+
         } else {
+
             val intent = Intent()
             intent.putExtra(
-                BookListActivity.DETAIL_ITEM_KEY, BookItem(
+                DETAIL_ITEM_KEY,
+                BookItem(
                     et_name.text.toString(),
-                    et_reason.text.toString(), cb_completed.isChecked, bookItem?.id ?: -1
-                )
+                    et_reason.text.toString(),
+                    cb_completed.isChecked,
+                    bookItem?.id ?: -1
+                ).toCsvString()
             )
             setResult(Activity.RESULT_OK, intent)
             finish()
+
         }
     }
 
     private fun loadBookItemDetails(item: BookItem?) {
+
         et_name.setText(item?.name ?: "")
         et_name.requestFocus()
 
@@ -48,5 +63,6 @@ class BookDetailActivity : AppCompatActivity() {
         if (item!!.completed) {
             cb_completed.isChecked = true
         }
+
     }
 }
