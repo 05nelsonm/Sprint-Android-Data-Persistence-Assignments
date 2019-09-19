@@ -13,6 +13,7 @@ import java.util.Locale
 
 // TODO 6: Annotate the Entity
 
+@Entity
 class JournalEntry : Serializable {
 
     companion object {
@@ -27,6 +28,7 @@ class JournalEntry : Serializable {
     var dayRating: Int = 0
 
     // TODO 7: Let's make id the primary key
+    @PrimaryKey(autoGenerate = true) @NonNull
     var id: Int = 0
 
     constructor(id: Int) {
