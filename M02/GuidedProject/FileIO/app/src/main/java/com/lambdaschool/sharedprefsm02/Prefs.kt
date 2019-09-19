@@ -1,9 +1,9 @@
-package com.lambdaschool.sharedprefs
+package com.lambdaschool.sharedprefsm02
 
 import android.content.Context
 import android.content.SharedPreferences
 import android.graphics.Color
-import com.lambdaschool.sharedprefs.model.JournalEntry
+import com.lambdaschool.sharedprefsm02.model.JournalEntry
 
 // TODO 2: Declare implementation of interface here and add overrides
 class Prefs(context: Context): JournalRepoInterface {

@@ -1,10 +1,8 @@
-package com.lambdaschool.sharedprefs
+package com.lambdaschool.sharedprefsm02
 
 import android.content.Context
-import android.content.SharedPreferences
-import android.graphics.Color
 import android.os.Environment
-import com.lambdaschool.sharedprefs.model.JournalEntry
+import com.lambdaschool.sharedprefsm02.model.JournalEntry
 import org.json.JSONException
 import org.json.JSONObject
 import java.io.*

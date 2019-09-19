@@ -1,13 +1,13 @@
-package com.lambdaschool.sharedprefs.ui
+package com.lambdaschool.sharedprefsm02.ui
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.lambdaschool.sharedprefs.R
-import com.lambdaschool.sharedprefs.entity.Journal.Companion.createJournalEntry
-import com.lambdaschool.sharedprefs.model.JournalEntry
-import com.lambdaschool.sharedprefs.repo
+import com.lambdaschool.sharedprefsm02.R
+import com.lambdaschool.sharedprefsm02.entity.Journal.Companion.createJournalEntry
+import com.lambdaschool.sharedprefsm02.model.JournalEntry
+import com.lambdaschool.sharedprefsm02.repo
 import kotlinx.android.synthetic.main.activity_journal_list.*
 import kotlinx.android.synthetic.main.content_journal_list.*
 import timber.log.Timber.i

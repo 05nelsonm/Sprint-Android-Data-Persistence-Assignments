@@ -1,4 +1,4 @@
-package com.lambdaschool.sharedprefs.ui
+package com.lambdaschool.sharedprefsm02.ui
 
 import android.app.Activity
 import android.content.Intent
@@ -9,8 +9,8 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.SeekBar
 import androidx.appcompat.app.AppCompatActivity
-import com.lambdaschool.sharedprefs.R
-import com.lambdaschool.sharedprefs.model.JournalEntry
+import com.lambdaschool.sharedprefsm02.R
+import com.lambdaschool.sharedprefsm02.model.JournalEntry
 import kotlinx.android.synthetic.main.activity_detail.*
 import timber.log.Timber.i
 

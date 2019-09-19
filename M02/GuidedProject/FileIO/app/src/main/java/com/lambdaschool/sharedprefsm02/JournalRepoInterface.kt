@@ -1,6 +1,6 @@
-package com.lambdaschool.sharedprefs
+package com.lambdaschool.sharedprefsm02
 
-import com.lambdaschool.sharedprefs.model.JournalEntry
+import com.lambdaschool.sharedprefsm02.model.JournalEntry
 
 // TODO 1: Extract behavior from Prefs to an interface
 

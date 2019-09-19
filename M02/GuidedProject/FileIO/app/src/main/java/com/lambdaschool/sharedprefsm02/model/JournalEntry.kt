@@ -1,4 +1,4 @@
-package com.lambdaschool.sharedprefs.model
+package com.lambdaschool.sharedprefsm02.model
 
 import android.net.Uri
 import org.json.JSONException
