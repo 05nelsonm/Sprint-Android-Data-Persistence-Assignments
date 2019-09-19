@@ -51,12 +51,12 @@ class BookItemRecyclerViewAdapter(private val data: MutableList<BookItem>) :
         // On Click Listener for the entry
         holder.bookItemContainer.setOnClickListener {
             val intent = Intent(context, BookDetailActivity::class.java)
-            intent.putExtra(BookListActivity.DETAIL_ITEM_KEY, data[position])
+            intent.putExtra(BookListActivity.EDIT_ITEM_KEY, data[position].toCsvString())
             (context as Activity).startActivityForResult(intent, BookListActivity.EDIT_ITEM_CODE)
         }
 
         // Delete an item
-        holder.bookItemContainer.setOnLongClickListener {
+        /*holder.bookItemContainer.setOnLongClickListener {
 
             val builder = AlertDialog.Builder(context)
 
@@ -74,6 +74,6 @@ class BookItemRecyclerViewAdapter(private val data: MutableList<BookItem>) :
             dialog.show()
 
             true
-        }
+        }*/
     }
 }
