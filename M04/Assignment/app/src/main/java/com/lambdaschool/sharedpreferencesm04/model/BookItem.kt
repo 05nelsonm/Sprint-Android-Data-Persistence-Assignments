@@ -1,5 +1,7 @@
 package com.lambdaschool.sharedpreferencesm04.model
 
+import androidx.annotation.NonNull
+import androidx.room.PrimaryKey
 import java.io.Serializable
 
 class BookItem: Serializable {
@@ -11,6 +13,8 @@ class BookItem: Serializable {
     var name: String? = null
     var reason: String? = null
     var completed: Boolean = false
+
+    @PrimaryKey(autoGenerate = true) @NonNull
     var id: Int = 0
 
     constructor(name: String?, reason: String?, completed: Boolean, id: Int) {
