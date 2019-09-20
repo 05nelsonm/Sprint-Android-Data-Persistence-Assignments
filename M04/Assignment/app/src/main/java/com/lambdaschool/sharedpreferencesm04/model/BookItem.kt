@@ -1,9 +1,11 @@
 package com.lambdaschool.sharedpreferencesm04.model
 
 import androidx.annotation.NonNull
+import androidx.room.Entity
 import androidx.room.PrimaryKey
 import java.io.Serializable
 
+@Entity
 class BookItem: Serializable {
 
     companion object {
