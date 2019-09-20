@@ -1,21 +1,21 @@
 package com.lambdaschool.sharedpreferencesm04.util
 
 import android.app.Application
+import com.lambdaschool.sharedpreferencesm04.database.BookDBRepo
 
-val prefs: Prefs by lazy {
-    App.prefs!!
+val repo: BookItemRepoInterface by lazy {
+    App.repo!!
 }
 
 class App : Application() {
 
     companion object {
-        var prefs: Prefs? = null
+        var repo: BookItemRepoInterface? = null
     }
 
     override fun onCreate() {
         super.onCreate()
 
-        prefs = Prefs(applicationContext)
-        val i = 1
+        repo = BookDBRepo(applicationContext)
     }
 }
