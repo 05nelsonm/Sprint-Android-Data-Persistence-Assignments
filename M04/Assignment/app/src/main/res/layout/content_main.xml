@@ -10,13 +10,27 @@
     tools:context=".activity.BookListActivity"
     tools:showIn="@layout/activity_book_list">
 
-        <androidx.recyclerview.widget.RecyclerView
+        <!--<androidx.recyclerview.widget.RecyclerView
             android:id="@+id/book_item_list"
             android:name="com.lambdaschool.sharedpreferences.activity.BookListActivity"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="16dp"
             tools:context=".activity.BookListActivity"
-            tools:listitem="@layout/book_item_layout" />
+            tools:listitem="@layout/book_item_layout" />-->
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/listLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+
+        </ScrollView>
 
 </LinearLayout>

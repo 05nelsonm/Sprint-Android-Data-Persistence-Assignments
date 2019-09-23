@@ -24,7 +24,6 @@ class BookDBRepo(val context: Context) : BookItemRepoInterface {
         database.bookEntryDao().deleteEntry(entry)
     }
 
-    // TODO 15: Build the Room database
     private val database by lazy {
         Room.databaseBuilder(
             context.applicationContext,

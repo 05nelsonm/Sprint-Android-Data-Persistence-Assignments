@@ -20,10 +20,10 @@ class BookDetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_book_detail)
 
-        if (intent.getStringExtra(BookListActivity.EDIT_ITEM_KEY) != null) {
-            bookItem = BookItem(intent.getStringExtra(BookListActivity.EDIT_ITEM_KEY)!!)
+        if (intent.getSerializableExtra(BookListActivity.EDIT_ITEM_KEY) != null) {
+            bookItem = intent.getSerializableExtra(BookListActivity.EDIT_ITEM_KEY) as BookItem
         } else {
-            bookItem = BookItem("", "", false, intent.getIntExtra(BookListActivity.NEW_ITEM_KEY,-1))
+            bookItem = intent.getSerializableExtra(BookListActivity.NEW_ITEM_KEY)
         }
 
         loadBookItemDetails(bookItem)
@@ -45,7 +45,7 @@ class BookDetailActivity : AppCompatActivity() {
                     et_reason.text.toString(),
                     cb_completed.isChecked,
                     bookItem?.id ?: -1
-                ).toCsvString()
+                )
             )
             setResult(Activity.RESULT_OK, intent)
             finish()

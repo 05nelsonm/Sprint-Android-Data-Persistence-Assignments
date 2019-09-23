@@ -9,7 +9,7 @@ import java.io.Serializable
 class BookItem: Serializable {
 
     companion object {
-        const val INVALID_ID = -1
+        const val INVALID_ID = 0
     }
 
     var name: String? = null
