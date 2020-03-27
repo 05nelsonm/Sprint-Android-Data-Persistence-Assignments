@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/secondaryColor"
+    android:orientation="vertical"
+    tools:context=".activity.BookDetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="16dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/secondaryTextColor"
+            android:hint="Title"
+            android:singleLine="true"
+            android:textColor="@color/secondaryTextColor"
+            android:textColorHint="@color/hintTextColor" />
+
+        <EditText
+            android:id="@+id/et_reason"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/secondaryTextColor"
+            android:hint="Reason"
+            android:isScrollContainer="true"
+            android:paddingTop="32dp"
+            android:paddingBottom="32dp"
+            android:textColor="@color/secondaryTextColor"
+            android:textColorHint="@color/hintTextColor" />
+
+        <CheckBox
+            android:id="@+id/cb_completed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@android:color/white"
+            android:text="Read"
+            android:textColor="@color/secondaryTextColor"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

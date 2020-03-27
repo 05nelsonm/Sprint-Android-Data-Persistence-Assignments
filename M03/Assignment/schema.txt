@@ -1,0 +1,84 @@
+-- Part 2:
+
+	-- 2.2) Create a PLAYERS table
+    
+	    CREATE TABLE players (
+	      player_id INTEGER PRIMARY KEY,
+	      first_name TEXT,
+	      last_name TEXT,
+	      age INTEGER,
+          team INTEGER,
+          FOREIGN KEY(team) REFERENCES teams(team_id)
+	    );
+    
+    -- 2.4) Create a TEAMS table
+	    CREATE TABLE teams (
+	      team_id INTEGER PRIMARY KEY,
+	      team_name TEXT
+	      );
+
+-- Part 3:
+
+	-- 3.1) Insert data into tables
+    
+	    -- player:
+	    INSERT INTO players (player_id, first_name, last_name, age, team)
+	    VALUES (1, "Miguel", "Cabrera", 36, 1);
+	    -- team:
+	    INSERT INTO teams (team_id, team_name)
+	    VALUES (1, "Detroit Tigers");
+    
+	    -- player:
+	    INSERT INTO players (player_id, first_name, last_name, age, team)
+	    VALUES (2, "Rickey", "Henderson", 60, 2);
+	    -- team:
+	    INSERT INTO teams (team_id, team_name)
+	    VALUES (2, "Oakland Athletics");
+    
+    
+	    -- player:
+	    INSERT INTO players (player_id, first_name, last_name, age, team)
+	    VALUES (3, "Edwin", "Jackson", 36, 1);
+	    -- team:
+	    -- Detroit Tigers
+	    
+	    
+	    -- player:
+	    INSERT INTO players (player_id, first_name, last_name, age, team)
+	    VALUES (4, "Francisco", "Liriano", 35, 3);
+	    -- team:
+	    INSERT INTO teams (team_id, team_name)
+	    VALUES (3, "Pittsburgh Pirates");
+	    
+	    
+	    -- player:
+	    INSERT INTO players (player_id, first_name, last_name, age, team)
+	    VALUES (5, "Buster", "Posey", 32, 4);
+	    -- team:
+	    INSERT INTO teams (team_id, team_name)
+	    VALUES (4, "San Francisco Giants");
+	    
+	    -- player:
+	    INSERT INTO players (player_id, first_name, last_name, age, team)
+	    VALUES (6, "Mike", "Trout", 28, 5);
+	    -- team:
+	    INSERT INTO teams (team_id, team_name)
+	    VALUES (5, "Los Angeles Angels");
+	    
+	    -- player:
+	    INSERT INTO players (player_id, first_name, last_name, age, team)
+	    VALUES (7, "Mike", "Yastrzemski", 29, 4);
+	    -- team:
+	    -- San Francisco Giants
+	    
+	    -- player:
+	    INSERT INTO players (player_id, first_name, last_name, age, team)
+	    VALUES (8, "Ronny", "Rodriguez", 27, 1);
+	    -- team:
+	    -- Detroit Tigers
+	    
+	    -- player:
+	    INSERT INTO players (player_id, first_name, last_name, age, team)
+	    VALUES (9, "Griffin", "Canning", 23, 5);
+	    -- team:
+	    -- Los Angeles Angels

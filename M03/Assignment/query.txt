@@ -1,0 +1,53 @@
+-- Part 4:
+
+	-- 4.3) Select all data from one of the tables
+    
+	    --SELECT * FROM players;
+    
+    -- 4.5) Select a single column from one of the tables
+    
+	    --SELECT first_name as 'First Name' FROM players;
+    
+    -- 4.7) Select a single element of previous query
+    
+	    --SELECT first_name as 'First Name' FROM players WHERE player_id=5;
+    
+    -- 4.9) Select a single element of previous query
+    
+	    --SELECT first_name as 'First Name' FROM players WHERE player_id>7;
+	    --SELECT first_name as 'First Name' FROM players WHERE player_id BETWEEN 3 AND 8;
+
+-- Part 5:
+
+	-- 5.1) Use UPDATE, SET, and WHERE clauses to modify tables
+    
+    	--UPDATE players SET age=-1 WHERE player_id>3;
+        --UPDATE players SET last_name='----UPDATED!!!----' where last_name LIKE "Posey";
+        --UPDATE players SET last_name='----SEARCH & UPDATED!!!----' where last_name LIKE "%son%";
+        --SELECT * FROM players;
+        
+-- Part 6:
+
+	-- 6.1) Use DELETE, FROM and WHERE clauses to delete an entry
+    
+    	--Check to ensure selecting correct, single entry
+        --SELECT * FROM players WHERE player_id=3
+        
+    	--DELETE FROM players WHERE player_id=3;
+        --SELECT * FROM players;
+        
+-- Part Challenge:
+
+	-- Challenge.1) add a FOREIGN KEY for the id of the team the player belongs to
+    
+    	-- Done
+        
+    -- Challenge.2) Update insert queries with necessary data for the FOREIGN KEY
+    
+    	-- Done
+        
+	-- Challenge.3) Write queries to SELECT values from both columns, FROM your main table,
+    --				and JOIN the second table ON the foreign key with the other table's key
+    
+    	SELECT * FROM players
+        JOIN teams ON players.team=teams.team_id;
